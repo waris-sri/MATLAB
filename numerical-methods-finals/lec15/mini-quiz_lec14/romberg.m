@@ -7,7 +7,7 @@ function [q,ea,iter]=romberg(func,a,b,es,maxit,varargin)
 % a, b = integration limits
 % es = desired relative error (default = 0.000001%)
 % maxit = maximum allowable iterations (default = 30)
-% pl,p2,... = additional parameters used by func
+% p1,p2,... = additional parameters used by func
 % output:
 % q = integral estimate
 % ea = approximate relative error (%)

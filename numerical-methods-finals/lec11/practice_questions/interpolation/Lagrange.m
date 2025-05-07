@@ -11,6 +11,7 @@ function yint = Lagrange(x,y,xx)
     % interpolation is calculated
     % output:
     % yint = interpolated value of dependent variable
+    format short
     n = length(x);
     if length(y)~=n, error('x and y must be same length'); end
     s = 0;
@@ -18,9 +19,10 @@ function yint = Lagrange(x,y,xx)
         product = y(i);
         for j = 1:n
             if i ~= j
-                product = product.*(xx-x(j))/(x(i)-x(j));
+                product = product.*(xx-x(j))/(x(i)-x(j))
             end
         end
+        fprintf("Combined product %d: %f\n", i, product)
         s = s+product;
     end
     yint = s;
